@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mobile Phone Details</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    spline-viewer {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1; /* Push behind all other elements */
+    }
+
+    main {
+      position: relative; /* Bring above 3D background */
+      z-index: 1;
+    }
+  </style>
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.68/build/spline-viewer.js"></script>
+</head>
+<body>
+<spline-viewer url="https://prod.spline.design/TBa3mG5BCVSAl7Qk/scene.splinecode"></spline-viewer>
+  <div class="container">
+    <h2>Mobile Phone Details Form</h2>
+    <form id="mobileForm">
+      <label for="brand">Brand:</label>
+      <input type="text" id="brand" name="brand" placeholder="e.g., Apple, Samsung, Google" required>
+
+      <label for="model">Model:</label>
+      <input type="text" id="model" name="model" placeholder="e.g., iPhone 15, Galaxy S24" required>
+
+      <button type="submit" id="submitBtn">Submit</button>
+    </form>
+
+    <div id="output"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
